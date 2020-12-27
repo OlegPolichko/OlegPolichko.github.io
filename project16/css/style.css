@@ -1,0 +1,102 @@
+@keyframes svganimations{
+0%{
+  stroke-dashoffset: 0;
+}
+50%{
+  stroke-dashoffset: 1000;
+ }
+ 100%{
+   stroke-dashoffset: 0;
+ }
+}
+@keyframes iconsrotate {
+  100%{
+    transform: rotate(180deg);
+  }
+
+}
+@keyframes iconsscale {
+  100%{
+    transform: scale(2);
+  }
+  
+}
+@keyframes icolor{
+  0%{
+    stroke: rgb(40, 152, 250);
+  }
+  25%{
+    stroke: rgb(47, 250, 40);
+  }
+  
+  50%{
+    stroke: rgb(250, 246, 40);
+  }
+  
+  100%{
+    stroke: rgb(250, 71, 40);
+  }
+  }
+html{
+  height: 100%;
+}
+body, html{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card{
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card svg{
+  stroke-width: 3px;
+  stroke: rgb(225, 233, 30);
+  width: 100%;
+  height: 100%;
+}
+.card:hover svg .tree{
+stroke-dasharray: 20;
+animation: svganimations 20s linear forwards infinite;
+}
+.card svg{
+  animation: icolor 2s infinite alternate;
+}
+.fa-bahal{
+  font-size: 2em;
+  position: absolute;
+  top: 2%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  color: rgb(225, 233, 30);
+}
+.fa-candy-cane{
+font-size: 2em;
+position: absolute;
+top: 50%;
+left: 50%;
+color: red;
+}
+.fa-holly-berry{
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  color: rgb(6, 117, 40);
+  font-size: 2em;
+}
+.fa-snowman{
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  color: rgb(9, 185, 230);
+  font-size: 2em;
+}
+i{
+  animation-name: iconscale, iconrotate;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
